@@ -1,0 +1,9 @@
+pipeline{
+  ageny any
+  stages{
+     stage('clone'){
+     steps{
+     }
+     }
+  }
+}
