@@ -14,7 +14,7 @@ pipeline {
         stage('Deploy') { 
             steps {
               echo "deploying  the job"
-         stage('Release")
+         stage('Release')
             steps{
                echo "release the job"
             }
