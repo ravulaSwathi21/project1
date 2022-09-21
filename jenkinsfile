@@ -1,9 +1,24 @@
 pipeline{
   agent any
     stages{
-      stage('build'){
+      stage('Clone'){
          steps{
-           echo "building the job"
+           echo "cloning the job"
+        stage('Build'){
+            steps{
+              echo "building the job"
+          stage('Test'){
+             steps{
+               echo "testing the job"
+           stage('Deploy'){
+              steps{
+               echo "deploying the job"
+              }
+           }
+             }
+          }
+            }
+        }
            }
          }
         }
