@@ -1,26 +1,16 @@
-pipeline{
-  agent any
-    stages{
-      stage('Clone'){
-         steps{
-           echo "cloning the job"
-        stage('Build'){
-            steps{
-              echo "building the job"
-          stage('Test'){
-             steps{
-               echo "testing the job"
-           stage('Deploy'){
-              steps{
-               echo "deploying the job"
-              }
-           }
-             }
-          }
+
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
             }
         }
-           }
-         }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
         }
-     }
-
+    }
+}
